@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
-import { FontSizeEditorComponent } from './font-size-editor/font-size-editor.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FontSizeEditorComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
