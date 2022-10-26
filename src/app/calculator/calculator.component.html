@@ -1,0 +1,8 @@
+<input #num1 type="number"><input #num2 type="number">
+<br>
+<button #add (click)="calculate(+num1.value, +num2.value, add.innerText)">+</button>
+<button #min (click)="calculate(+num1.value, +num2.value, min.innerText)">-</button>
+<button #mul (click)="calculate(+num1.value, +num2.value, mul.innerText)">*</button>
+<button #div (click)="calculate(+num1.value, +num2.value, div.innerText)">/</button>
+
+<p>Result: {{result}}</p>
