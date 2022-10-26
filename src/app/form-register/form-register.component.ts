@@ -12,22 +12,29 @@ export class FormRegisterComponent implements OnInit {
   profileGroup: FormGroup | any;
   countries = ['Việt Nam', 'Nhật Bản', 'Mỹ', 'Hàn Quốc']
 
-  constructor() {
+  loginForm: FormGroup | any;
+
+  constructor(private fb: FormBuilder) {
   }
 
   ngOnInit(): void {
-    this.registerForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      pwGroup: this.pwGroup = new FormGroup({
-        password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-        confirmPassword: new FormControl('', [Validators.required, Validators.minLength(6)])
-      }, comparePassword),
-      profile: this.profileGroup = new FormGroup({
-        country: new FormControl('', Validators.required),
-        age: new FormControl('', [Validators.required, Validators.min(18)]),
-        gender: new FormControl('', Validators.required),
-        phone: new FormControl('', [Validators.required, Validators.pattern("^\\+84\\d{9,10}$")])
-      })
+    // this.registerForm = new FormGroup({
+    //   email: new FormControl('', [Validators.required, Validators.email]),
+    //   pwGroup: this.pwGroup = new FormGroup({
+    //     password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    //     confirmPassword: new FormControl('', [Validators.required, Validators.minLength(6)])
+    //   }, comparePassword),
+    //   profile: this.profileGroup = new FormGroup({
+    //     country: new FormControl('', Validators.required),
+    //     age: new FormControl('', [Validators.required, Validators.min(18)]),
+    //     gender: new FormControl('', Validators.required),
+    //     phone: new FormControl('', [Validators.required, Validators.pattern("^\\+84\\d{9,10}$")])
+    //   })
+    // })
+
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
     })
   }
 
