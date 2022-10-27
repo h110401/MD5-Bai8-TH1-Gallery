@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormRegisterComponent } from './form-register.component';
+import { TimelinesComponent } from './timelines.component';
 
-describe('FormRegisterComponent', () => {
-  let component: FormRegisterComponent;
-  let fixture: ComponentFixture<FormRegisterComponent>;
+describe('TimelinesComponent', () => {
+  let component: TimelinesComponent;
+  let fixture: ComponentFixture<TimelinesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormRegisterComponent ]
+      declarations: [ TimelinesComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FormRegisterComponent);
+    fixture = TestBed.createComponent(TimelinesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
