@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailComponent } from './detail.component';
+import { ImageGalleryComponent } from './image-gallery.component';
 
-describe('DetailComponent', () => {
-  let component: DetailComponent;
-  let fixture: ComponentFixture<DetailComponent>;
+describe('ImageGalleryComponent', () => {
+  let component: ImageGalleryComponent;
+  let fixture: ComponentFixture<ImageGalleryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetailComponent ]
+      declarations: [ ImageGalleryComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DetailComponent);
+    fixture = TestBed.createComponent(ImageGalleryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

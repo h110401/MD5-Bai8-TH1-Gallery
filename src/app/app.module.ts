@@ -3,22 +3,23 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ReactiveFormsModule} from "@angular/forms";
-import { DictionaryComponent } from './dictionary/dictionary.component';
-import { DetailComponent } from './detail/detail.component';
+import {ImageGalleryModule} from "./image-gallery/image-gallery.module";
+import {GalleryConfig} from "./image-gallery/token";
 
 @NgModule({
   declarations: [
     AppComponent,
-    DictionaryComponent,
-    DetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
+    ImageGalleryModule
   ],
-  providers: [],
+  providers: [
+    {
+    provide: GalleryConfig, useValue: 3
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
